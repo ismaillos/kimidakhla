@@ -1,38 +1,36 @@
 # Setup Sheet
 
-## Google Sheet ID
+Sheet ID: `1SsoBsyTOH7t57CiVZWVdn1TzevHDOEh8dAxDl6iQnZw`
 
-The sheet ID is part of the webhook URL:
-```
-https://script.google.com/macros/s/AKfycbxb1Vg_v0hZxCypBVZnRiEe0gKTVz7jGgx0NL-_Oj1V73sKY9uCMifW7MCfrq8H5T8/exec
-```
+Tab name: `dakhlacommande`
 
-## Sheet Columns
+## Webhook URL
 
-| Column | Header |
-|--------|--------|
-| A | Timestamp |
-| B | Name |
-| C | Phone |
-| D | City |
-| E | Product |
-| F | Quantity |
-| G | Notes |
-| H | Status |
+Le webhook est deploye comme Web App sur Google Apps Script.
 
-## Apps Script Code
+URL actuelle : `https://script.google.com/macros/s/AKfycbx_PLACEHOLDER/exec`
 
-See `apps-script.gs` for the full code.
+## Colonnes du Sheet
 
-## Deployment Steps
+| Colonne | Contenu |
+|---------|---------|
+| A | Date |
+| B | Nom |
+| C | Telephone |
+| D | Adresse |
+| E | Ville |
+| F | Produit |
+| G | Quantite |
+| H | Prix Total |
+| I | Statut |
 
-1. Create new Google Sheet
-2. Add headers in row 1
-3. Open Extensions > Apps Script
-4. Paste code from `apps-script.gs`
-5. Save project
-6. Click Deploy > New deployment
-7. Select type: Web app
-8. Set access to: Anyone
-9. Copy web app URL
-10. Add to `.env` file
+## Redeploiement
+
+Apres modification de `apps-script.gs` :
+1. Sauvegarder le projet
+2. Deploy > New deployment
+3. Type: Web app
+4. Execute as: Me
+5. Who has access: Anyone
+6. Copier la nouvelle URL
+7. Mettre a jour `VITE_SHEET_WEBHOOK_URL` dans `.env`

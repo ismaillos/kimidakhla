@@ -1,8 +1,15 @@
 # Dakhla Artisanal
 
-Produits naturels du Sahara Marocain.
+Boutique en ligne de produits naturels du Sahara Marocain.
 
-## Development
+## Technologies
+
+- React 18 + TypeScript + Vite
+- Tailwind CSS + shadcn/ui
+- Google Sheets webhook pour les commandes
+- Deploiement statique (Vercel)
+
+## Developpement
 
 ```bash
 npm install
@@ -15,27 +22,9 @@ npm run dev
 npm run build
 ```
 
-## Deployment
+## Variables d'environnement
 
-Deployed on Vercel with auto-deployment from GitHub.
-
-## Tech Stack
-
-- React 18
-- TypeScript
-- Vite
-- Tailwind CSS
-- shadcn/ui
-- React Router
-
-## Features
-
-- WhatsApp ordering
-- Multi-language support
-- Blog with SEO
-- Product catalog
-- Search functionality
-- PWA support
-- Google Analytics
-- Facebook Pixel
-- Google Ads conversion tracking
+```
+VITE_SHEET_WEBHOOK_URL=URL_DU_WEB_APP_GOOGLE
+VITE_WHATSAPP_NUMBER=212677031561
+```
